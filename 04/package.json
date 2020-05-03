@@ -9,8 +9,8 @@
     "webpack-cli": "^3.3.11"
   },
   "scripts": {
-    "wd": "npx webpack --config webpack-dev.config.js",
-    "wp": "npx webpack --config webpack-prod.config.js"
+    "wd": "npx webpack --config webpack.config.js -w --mode development",
+    "wp": "npx webpack --config webpack.config.js --mode production"
   },
   "keywords": [],
   "author": "",

@@ -94,12 +94,7 @@
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "saludo", function() { return saludo; });
-
-function saludo(msg){
-    console.log(msg);
-}
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"saludo\", function() { return saludo; });\n\r\nfunction saludo(msg){\r\n    console.log(msg);\r\n}\n\n//# sourceURL=webpack:///./src/js/imp/saludofn.js?");
 
 /***/ }),
 
@@ -111,15 +106,8 @@ function saludo(msg){
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _imp_saludofn__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./imp/saludofn */ "./src/js/imp/saludofn.js");
-
-
-
-
-Object(_imp_saludofn__WEBPACK_IMPORTED_MODULE_0__["saludo"])('hola desde servicios importando la funcion desde saludofn');
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _imp_saludofn__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./imp/saludofn */ \"./src/js/imp/saludofn.js\");\n\r\n\r\n\r\n\r\nObject(_imp_saludofn__WEBPACK_IMPORTED_MODULE_0__[\"saludo\"])('hola desde servicios importando la funcion desde saludofn');\n\n//# sourceURL=webpack:///./src/js/servicios.js?");
 
 /***/ })
 
 /******/ });
-//# sourceMappingURL=servicios.js.map

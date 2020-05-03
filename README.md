@@ -1,6 +1,7 @@
 
 # WEBPACK 2020 (v 4.43)
 
+
 ## Uso de las configuraciones:
 1. Copia un archivo package.json
 2. Ejecuta `npm install` para instalar las depedencias.
@@ -33,7 +34,8 @@ Si lo que queremos es que compile ante cambios el archivo añadimos la bandera -
 ``` 
 npx webpack src/codigo.js -w
 ```
-Por defecto se ejecuta para producción no creará sourcemaps y minifica el codigo, para ejecutar modo desarrollo añade la bandera --mode
+Webpack se puede ejecutar en varios modos. Modo de desarrollo `development` no minificara el código y el modo `production` que si lo minificará, además es interesante que cuando ejecutes el modo desarrollo añadas la bandera u opción `-w` watch para escuchar cambios y ejecutar de nuevo la compilación.
+
 ```` 
 npx webpack src/codigo.js -w --mode development
 ````
@@ -55,38 +57,26 @@ Y para desarrollo:
 npm run wd
 ```
 ## 03. Con archivo de configuración.
-Ejemplo simple de archivo webpack-dev.config.js version desarrollo con watch y source-maps.
+Ejemplo definiendo entrada y salida en archivo `webpack.config.js`.
 
 ``` 
 const path = require('path');
-module.exports = { 
-	entry: './src/js/codigo.js',
-	output: {
-		path: path.resolve(__dirname, 'dist'),
-		filename: 'main.js'
-	},
-	watch: true,
-	mode: 'development',
-	devtool: 'source-map'
-};
-```
-Ejemplo de archivo webpack-prod.config.js version producción:
-``` 
-const path = require('path');
 module.exports = {
-    entry: './src/js/codigo.js',
+    entry: {
+        'main': ['./src/js/codigo.js'], // suma se concatenara, index.ts concatenara todos sus imports
+        'servicios': './src/js/servicios.js' // este no se concatenará salvo que tenga imports desde main, debera ser añadido con script src=dist/servicios.js
+    },
     output: {
         path: path.resolve(__dirname, 'dist'),
-        filename: 'main.js'
-    },
-    mode: 'production'
+        filename: '[name].js'
+    }
 };
 ```
-Modificación del archivo `package.json` para usar estos archivos de configuración:
+Modificación del archivo `package.json` para usar la configuración en archivo:
 ``` 
  "scripts": {
-    "wd": "npx webpack --config webpack-dev.config.js",
-    "wp": "npx webpack --config webpack-prod.config.js" 
+    "wd": "npx webpack --config webpack.config.js -w --mode development",
+    "wp": "npx webpack --config webpack.config.js --mode production"
   }
 ```
 Para ejecutar webpack en desarrollo escribimos

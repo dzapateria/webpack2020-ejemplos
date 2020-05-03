@@ -10,4 +10,4 @@
 
 console.log('soy el boton jquery');
 
-export const precio = 200;
+export const precio = 400;

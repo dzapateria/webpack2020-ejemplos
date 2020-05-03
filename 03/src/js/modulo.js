@@ -1,4 +1,4 @@
 
-export const color = 'azul claro';
+export const color = 'azul';
 
 console.log('modulo');

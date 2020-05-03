@@ -94,17 +94,7 @@
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _imp_modulo_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./imp/modulo.js */ "./src/js/imp/modulo.js");
-/* harmony import */ var _imp_botonjquery_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./imp/botonjquery.js */ "./src/js/imp/botonjquery.js");
-
-
-
-
-console.log(_imp_modulo_js__WEBPACK_IMPORTED_MODULE_0__["color"]);
-console.log(_imp_botonjquery_js__WEBPACK_IMPORTED_MODULE_1__["precio"]);
-
-Object(_imp_botonjquery_js__WEBPACK_IMPORTED_MODULE_1__["botonjquery"])();
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _imp_modulo_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./imp/modulo.js */ \"./src/js/imp/modulo.js\");\n/* harmony import */ var _imp_botonjquery_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./imp/botonjquery.js */ \"./src/js/imp/botonjquery.js\");\n\r\n\r\n\r\n\r\nconsole.log(_imp_modulo_js__WEBPACK_IMPORTED_MODULE_0__[\"color\"]);\r\nconsole.log(_imp_botonjquery_js__WEBPACK_IMPORTED_MODULE_1__[\"precio\"]);\r\n\r\nObject(_imp_botonjquery_js__WEBPACK_IMPORTED_MODULE_1__[\"botonjquery\"])();\n\n//# sourceURL=webpack:///./src/js/codigo.js?");
 
 /***/ }),
 
@@ -116,25 +106,7 @@ Object(_imp_botonjquery_js__WEBPACK_IMPORTED_MODULE_1__["botonjquery"])();
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "botonjquery", function() { return botonjquery; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "precio", function() { return precio; });
-
-function botonjquery(){
-    $(document).ready(function () {
-        $("#hide").click(function () {
-            $("p").hide();
-        });
-        $("#show").click(function () {
-            $("p").show();
-        });
-    });
-}
-
-
-console.log('soy el boton jquery');
-
-const precio = 200;
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"botonjquery\", function() { return botonjquery; });\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"precio\", function() { return precio; });\n\r\nfunction botonjquery(){\r\n    $(document).ready(function () {\r\n        $(\"#hide\").click(function () {\r\n            $(\"p\").hide();\r\n        });\r\n        $(\"#show\").click(function () {\r\n            $(\"p\").show();\r\n        });\r\n    });\r\n}\r\n\r\n\r\nconsole.log('soy el boton jquery');\r\n\r\nconst precio = 200;\n\n//# sourceURL=webpack:///./src/js/imp/botonjquery.js?");
 
 /***/ }),
 
@@ -146,12 +118,7 @@ const precio = 200;
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "color", function() { return color; });
-
-const color = 'azul claro';
-
-console.log('modulo');
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"color\", function() { return color; });\n\r\nconst color = 'azul claro';\r\n\r\nconsole.log('modulo');\n\n//# sourceURL=webpack:///./src/js/imp/modulo.js?");
 
 /***/ }),
 
@@ -162,10 +129,8 @@ console.log('modulo');
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! ./src/js/codigo.js */"./src/js/codigo.js");
-
+eval("module.exports = __webpack_require__(/*! ./src/js/codigo.js */\"./src/js/codigo.js\");\n\n\n//# sourceURL=webpack:///multi_./src/js/codigo.js?");
 
 /***/ })
 
 /******/ });
-//# sourceMappingURL=main.js.map

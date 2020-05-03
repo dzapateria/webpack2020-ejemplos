@@ -1,7 +1,7 @@
 
 import {color} from './modulo.js';
 
-let fruta = 'pera';
+let fruta = 'manzana';
 
 var hero = 'superman';
 

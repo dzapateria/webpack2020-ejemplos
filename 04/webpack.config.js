@@ -7,8 +7,5 @@ module.exports = {
     output: {
         path: path.resolve(__dirname, 'dist'),
         filename: '[name].js'
-    },
-    watch: true,
-    mode: 'development',
-    devtool: 'source-map'
+    }
 };
