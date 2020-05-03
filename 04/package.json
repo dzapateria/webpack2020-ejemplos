@@ -1,5 +1,5 @@
 {
-  "name": "02",
+  "name": "04",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -9,8 +9,8 @@
     "webpack-cli": "^3.3.11"
   },
   "scripts": {
-    "wp": "webpack src/codigo.js --mode production",
-    "wd": "webpack src/codigo.js -w --mode development"
+    "wd": "npx webpack --config webpack-dev.config.js",
+    "wp": "npx webpack --config webpack-prod.config.js"
   },
   "keywords": [],
   "author": "",
