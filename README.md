@@ -63,12 +63,12 @@ Ejemplo definiendo entrada y salida en archivo `webpack.config.js`.
 const path = require('path');
 module.exports = {
     entry: {
-        'main': ['./src/js/codigo.js'], // suma se concatenara, index.ts concatenara todos sus imports
-        'servicios': './src/js/servicios.js' // este no se concatenará salvo que tenga imports desde main, debera ser añadido con script src=dist/servicios.js
+        'main': ['./src/js/codigo.js'], // Se concatenara o resolverá dando una salida main.js. a incluir en <script src="">
+       'servicios': './src/js/servicios.js' // Se concatenara o resolverá dando una salida servicios.js a incluir en <script src="">
     },
     output: {
-        path: path.resolve(__dirname, 'dist'),
-        filename: '[name].js'
+       path: path.resolve(__dirname, 'dist'),
+      filename: '[name].js'
     }
 };
 ```
@@ -96,12 +96,12 @@ Para ello debemos modificar los archivos de configuracion de webpack, creando un
 Resulta muy interesante para poder tener un código modular y que además pueda estar funcionando en determinadas páginas.
 ``` 
  entry: {
-        'main': ['./src/ts/suma.ts', './src/ts/index.ts' ], // suma se concatenara, index.ts concatenara todos sus imports
-        'libre': './src/ts/libre.ts' // este no se concatenará salvo que tenga imports, se creara su propio libre.js y debera ser añadido con script src=
-    },
+    'main': ['./src/js/codigo.js'], // Se concatenara o resolverá dando una salida main.js. a incluir en <script src="">
+    'servicios': './src/js/servicios.js' // Se concatenara o resolverá dando una salida servicios.js a incluir en <script src="">
+  },
  output: {
-        path: path.resolve(__dirname, 'dist'),
-        filename: '[name].js'
+    path: path.resolve(__dirname, 'dist'),
+    filename: '[name].js'
     }
 ```
 
