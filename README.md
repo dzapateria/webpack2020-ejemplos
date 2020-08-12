@@ -1,6 +1,8 @@
 
 # WEBPACK 2020 (v 4.43)
-
+Las ventajas de usar Webpack son la capacidad de resolución de modulos con import/export principalmente.
+El código resultante es mucho más seguro no se ensucia el objeto global window y no tenemos necesidad de usar el patrón modulo en nuestro código para ello.
+Como extra el poder concatenar salidas, así como minificar el código.
 
 ## Uso de las configuraciones:
 1. Copia un archivo package.json
